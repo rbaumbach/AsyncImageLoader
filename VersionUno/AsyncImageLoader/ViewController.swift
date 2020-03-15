@@ -24,9 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         articleFetcher.fetch { [weak self] articles in
             self?.activityIndicatorView.stopAnimating()
-            
-            print("There are \(articles.count) articles")
-            
+                        
             self?.dataSource = articles
             
             self?.tableView.reloadData()
@@ -42,9 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
-    
-    // The last row has a problem because it has a nil image url
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ArticleTableViewCell
         
