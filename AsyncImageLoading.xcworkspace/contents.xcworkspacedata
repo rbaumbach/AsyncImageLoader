@@ -4,4 +4,7 @@
    <FileRef
       location = "group:VersionUno.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:VersionDos.xcodeproj">
+   </FileRef>
 </Workspace>
