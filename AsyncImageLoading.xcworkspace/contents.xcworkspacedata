@@ -7,4 +7,7 @@
    <FileRef
       location = "group:VersionDos.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:VersionTres.xcodeproj">
+   </FileRef>
 </Workspace>
