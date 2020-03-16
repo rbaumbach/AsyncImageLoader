@@ -50,8 +50,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.articleTitle.text = article.title
         
-        cell.articleImageView.setImage(imageURLString: article.imageURLString)
-        
+        if let asyncImageView = cell.articleImageView as? AsyncImageView {
+            asyncImageView.setImage(imageURLString: article.imageURLString)
+        }
+                
         return cell
     }
     

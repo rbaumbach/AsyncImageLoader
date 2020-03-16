@@ -14,9 +14,9 @@
 		942BE238241EE73C00497CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942BE235241EE73C00497CDF /* Main.storyboard */; };
 		942BE23A241EE74200497CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942BE239241EE74200497CDF /* Assets.xcassets */; };
 		942BE242241EE94900497CDF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BE23E241EE94900497CDF /* Article.swift */; };
-		942BE244241EEA1400497CDF /* UIImageView+VersionDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BE23D241EE94900497CDF /* UIImageView+VersionDos.swift */; };
 		942BE247241EEAA000497CDF /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BE245241EEAA000497CDF /* ArticleTableViewCell.swift */; };
 		942BE248241EEAA000497CDF /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942BE246241EEAA000497CDF /* ArticleTableViewCell.xib */; };
+		94397F11242013900079459A /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F10242013900079459A /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		942BE234241EE73C00497CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		942BE236241EE73C00497CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		942BE239241EE74200497CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		942BE23D241EE94900497CDF /* UIImageView+VersionDos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+VersionDos.swift"; sourceTree = "<group>"; };
 		942BE23E241EE94900497CDF /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		942BE245241EEAA000497CDF /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		942BE246241EEAA000497CDF /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		94397F10242013900079459A /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				942BE23E241EE94900497CDF /* Article.swift */,
 				942BE245241EEAA000497CDF /* ArticleTableViewCell.swift */,
 				942BE246241EEAA000497CDF /* ArticleTableViewCell.xib */,
-				942BE23D241EE94900497CDF /* UIImageView+VersionDos.swift */,
+				94397F10242013900079459A /* AsyncImageView.swift */,
 				942BE22F241EE6CC00497CDF /* ViewController.swift */,
 			);
 			path = AsyncImageLoader;
@@ -186,9 +186,9 @@
 				942BE230241EE6CC00497CDF /* ViewController.swift in Sources */,
 				942BE242241EE94900497CDF /* Article.swift in Sources */,
 				942BE22D241EE6B600497CDF /* AppDelegate.swift in Sources */,
-				942BE244241EEA1400497CDF /* UIImageView+VersionDos.swift in Sources */,
 				942BE247241EEAA000497CDF /* ArticleTableViewCell.swift in Sources */,
 				942BE22E241EE6B600497CDF /* SceneDelegate.swift in Sources */,
+				94397F11242013900079459A /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

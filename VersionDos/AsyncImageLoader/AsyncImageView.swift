@@ -2,30 +2,18 @@ import UIKit
 
 fileprivate let imageViewImageCache = NSCache<NSString, UIImage>()
 
-extension UIImageView {
-    private struct AssociatedKeys {
-        static var imageURLString: String?
-    }
-
-    var imageURLString: String? {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.imageURLString) as? String
-        }
-        
-        set {
-            objc_setAssociatedObject(self, &AssociatedKeys.imageURLString, newValue as String?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-}
-
-extension UIImageView {
+class AsyncImageView: UIImageView {
+    // MARK: - Private properties
+    
+    private var imageURLString: String?
+    
     // MARK: - Public methods
     
     func setImage(imageURLString: String?) {
         self.imageURLString = imageURLString
         
         image = nil
-
+        
         guard let imageURLString = imageURLString else {
             return
         }
@@ -33,7 +21,7 @@ extension UIImageView {
         guard let imageURL = URL(string: imageURLString) else {
             return
         }
-                        
+        
         if let cachedImage = imageViewImageCache.object(forKey: imageURLString as NSString) {
             image = cachedImage
             
