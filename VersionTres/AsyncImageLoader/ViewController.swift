@@ -10,6 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var dataSource: [Article] = []
     var articleFetcher = ArticleFetcher()
+    var asyncImageLoader = AsyncImageFetcher()
     
     // MARK: - View lifecycle
     
@@ -26,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self?.activityIndicatorView.stopAnimating()
                         
             self?.dataSource = articles
-            
+                        
             self?.tableView.reloadData()
         }
     }
@@ -50,8 +51,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.articleTitle.text = article.title
         
-        cell.articleImageView.setImage(imageURLString: article.imageURLString)
-                
+        let fetchDataTaskUUID = asyncImageLoader.fetchImage(imageURLString: article.imageURLString) { image in
+            DispatchQueue.main.async {
+                if let image = image {
+                    cell.articleImageView.image = image
+                }
+            }
+        }
+        
+        if let fetchDataTaskUUID = fetchDataTaskUUID {
+            cell.onReuse = { [weak self] in
+                self?.asyncImageLoader.cancelImageFetch(fetchDataTaskUUID)
+            }
+        }
+                        
         return cell
     }
     

@@ -8,12 +8,24 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleImageViewLayoutHeightConstraint: NSLayoutConstraint!
     
+    // MARK: - Public properties
+    
+    var onReuse: () -> Void = {}
+    
     // MARK: - View lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        onReuse()
+        
+        articleImageView.image = nil
     }
     
     // MARK: - Private methods

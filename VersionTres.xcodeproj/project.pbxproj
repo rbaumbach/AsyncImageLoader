@@ -13,10 +13,10 @@
 		94397F472420196D0079459A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F462420196D0079459A /* AppDelegate.swift */; };
 		94397F49242019720079459A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F48242019720079459A /* SceneDelegate.swift */; };
 		94397F4D24201A5A0079459A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F4C24201A5A0079459A /* Article.swift */; };
-		94397F5124201AC50079459A /* UIImageView+VersionTres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F4E24201AC50079459A /* UIImageView+VersionTres.swift */; };
 		94397F5724201E0D0079459A /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F5524201E0D0079459A /* ArticleTableViewCell.swift */; };
 		94397F5824201E0D0079459A /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94397F5624201E0D0079459A /* ArticleTableViewCell.xib */; };
 		94397F5924201EDD0079459A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F4A2420197A0079459A /* ViewController.swift */; };
+		94397F5B242023090079459A /* AsyncImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94397F5A242023090079459A /* AsyncImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		94397F48242019720079459A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94397F4A2420197A0079459A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94397F4C24201A5A0079459A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		94397F4E24201AC50079459A /* UIImageView+VersionTres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+VersionTres.swift"; sourceTree = "<group>"; };
 		94397F5524201E0D0079459A /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		94397F5624201E0D0079459A /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		94397F5A242023090079459A /* AsyncImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				94397F4C24201A5A0079459A /* Article.swift */,
 				94397F5524201E0D0079459A /* ArticleTableViewCell.swift */,
 				94397F5624201E0D0079459A /* ArticleTableViewCell.xib */,
-				94397F4E24201AC50079459A /* UIImageView+VersionTres.swift */,
+				94397F5A242023090079459A /* AsyncImageFetcher.swift */,
 				94397F4A2420197A0079459A /* ViewController.swift */,
 			);
 			path = AsyncImageLoader;
@@ -185,11 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94397F5924201EDD0079459A /* ViewController.swift in Sources */,
-				94397F5124201AC50079459A /* UIImageView+VersionTres.swift in Sources */,
 				94397F4D24201A5A0079459A /* Article.swift in Sources */,
 				94397F472420196D0079459A /* AppDelegate.swift in Sources */,
 				94397F5724201E0D0079459A /* ArticleTableViewCell.swift in Sources */,
 				94397F49242019720079459A /* SceneDelegate.swift in Sources */,
+				94397F5B242023090079459A /* AsyncImageFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
