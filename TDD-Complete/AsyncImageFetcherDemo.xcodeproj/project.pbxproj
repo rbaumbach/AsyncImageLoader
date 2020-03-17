@@ -34,7 +34,7 @@
 		94397F6524211FEC0079459A /* AsyncImageFetcherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncImageFetcherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94397F6824211FEC0079459A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		94397F6A24211FEC0079459A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
-		94397F6C24211FEC0079459A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		94397F6C24211FEC0079459A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94397F80242120920079459A /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94397F84242120920079459A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94397F8D242124E20079459A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				94397F8A242122EA0079459A /* AppLaunch */,
+				94DBC34E24212FC600FCA962 /* AsyncImageFetcher */,
 				94397F8B242122FD0079459A /* Resources */,
 				94397F8C242123130079459A /* Supporting Files */,
 			);
@@ -109,7 +110,6 @@
 			children = (
 				94397F6824211FEC0079459A /* AppDelegate.swift */,
 				94397F6A24211FEC0079459A /* SceneDelegate.swift */,
-				94397F6C24211FEC0079459A /* ViewController.swift */,
 			);
 			path = AppLaunch;
 			sourceTree = "<group>";
@@ -138,6 +138,14 @@
 				94397F84242120920079459A /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94DBC34E24212FC600FCA962 /* AsyncImageFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				94397F6C24211FEC0079459A /* ViewController.swift */,
+			);
+			path = AsyncImageFetcher;
 			sourceTree = "<group>";
 		};
 		D411EAB46CD9CD7CF9CC86DC /* Frameworks */ = {
