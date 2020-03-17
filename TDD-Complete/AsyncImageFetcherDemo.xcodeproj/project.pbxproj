@@ -19,6 +19,7 @@
 		94DBC357242130E100FCA962 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC355242130E100FCA962 /* ArticleTableViewCell.swift */; };
 		94DBC358242130E100FCA962 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94DBC356242130E100FCA962 /* ArticleTableViewCell.xib */; };
 		94DBC35A242136E600FCA962 /* AsyncImageFetcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */; };
+		94DBC35C24216DB100FCA962 /* la-costa-burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94DBC35B24216DB100FCA962 /* la-costa-burrito.jpg */; };
 		C4BA31586DBA2114871FAD43 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4863684C497C4C055764B913 /* Pods_Specs.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		94DBC355242130E100FCA962 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		94DBC356242130E100FCA962 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageFetcherSpec.swift; sourceTree = "<group>"; };
+		94DBC35B24216DB100FCA962 /* la-costa-burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "la-costa-burrito.jpg"; path = "../../../../../Desktop/la-costa-burrito.jpg"; sourceTree = "<group>"; };
+		94DBC35E24216DCD00FCA962 /* la-costa-burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "la-costa-burrito.jpg"; sourceTree = "<group>"; };
 		AEC3482A0C30F5A1EEF08F00 /* Pods-AsyncImageFetcherDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncImageFetcherDemo.release.xcconfig"; path = "Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B8D71DEB10ADC400E7100940 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 		CC54C48EE759822F9AB66631 /* Pods-AsyncImageFetcherDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncImageFetcherDemo.debug.xcconfig"; path = "Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 		94397F81242120920079459A /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94DBC35D24216DC500FCA962 /* Filez */,
+				94DBC35B24216DB100FCA962 /* la-costa-burrito.jpg */,
 				94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */,
 				94397F97242128380079459A /* Supporting Files */,
 			);
@@ -163,6 +168,14 @@
 			path = AsyncImageFetcher;
 			sourceTree = "<group>";
 		};
+		94DBC35D24216DC500FCA962 /* Filez */ = {
+			isa = PBXGroup;
+			children = (
+				94DBC35E24216DCD00FCA962 /* la-costa-burrito.jpg */,
+			);
+			path = Filez;
+			sourceTree = "<group>";
+		};
 		D411EAB46CD9CD7CF9CC86DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +207,7 @@
 				94397F6124211FEC0079459A /* Sources */,
 				94397F6224211FEC0079459A /* Frameworks */,
 				94397F6324211FEC0079459A /* Resources */,
+				6FBC34B5D17C16EAE45A0ADD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DBC35C24216DB100FCA962 /* la-costa-burrito.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +342,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FBC34B5D17C16EAE45A0ADD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BB4E884D3AD93E6FB015729 /* [CP] Embed Pods Frameworks */ = {
