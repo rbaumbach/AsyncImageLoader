@@ -89,4 +89,10 @@ class AsyncImageFetcher {
                 
         return imageFetchUUID
     }
+    
+    func cancel(imageFetchUUID: String) {
+        inProgressImageDataTasks[imageFetchUUID]?.cancel()
+        
+        inProgressImageDataTasks[imageFetchUUID] = nil
+    }
 }

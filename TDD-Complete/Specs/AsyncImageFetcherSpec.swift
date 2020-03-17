@@ -171,8 +171,6 @@ class AsyncImageFetcherSpec: QuickSpec {
                             }
                             
                             it("adds the image to the image cache") {
-                                // compare image?
-                                
                                 let cachedImage = anImageViewImageCache.object(forKey: "http://anImage.png" as NSString)
                                 
                                 expect(cachedImage).toNot(beNil())
@@ -191,7 +189,13 @@ class AsyncImageFetcherSpec: QuickSpec {
             }
             
             describe("cancel(imageFetchUUID:)") {
+                beforeEach {
+                    anImageViewImageCache.setObject(UIImage(), forKey: "http://it-dont-matter" as NSString)
+                }
                 
+                it("removes the data task from the inProgress dictionary") {
+                    expect(subject.inProgressImageDataTasks).to(beEmpty())
+                }
             }
         }
     }
