@@ -14,6 +14,11 @@
 		94397F8E242124E20079459A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94397F8D242124E20079459A /* Assets.xcassets */; };
 		94397F93242124EA0079459A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94397F8F242124EA0079459A /* LaunchScreen.storyboard */; };
 		94397F94242124EA0079459A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94397F91242124EA0079459A /* Main.storyboard */; };
+		94DBC3502421308400FCA962 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC34F2421308400FCA962 /* Article.swift */; };
+		94DBC352242130A600FCA962 /* AsyncImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC351242130A600FCA962 /* AsyncImageFetcher.swift */; };
+		94DBC357242130E100FCA962 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC355242130E100FCA962 /* ArticleTableViewCell.swift */; };
+		94DBC358242130E100FCA962 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94DBC356242130E100FCA962 /* ArticleTableViewCell.xib */; };
+		94DBC35A242136E600FCA962 /* AsyncImageFetcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */; };
 		C4BA31586DBA2114871FAD43 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4863684C497C4C055764B913 /* Pods_Specs.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		94397F90242124EA0079459A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94397F92242124EA0079459A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94397F95242128130079459A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DBC34F2421308400FCA962 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		94DBC351242130A600FCA962 /* AsyncImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageFetcher.swift; sourceTree = "<group>"; };
+		94DBC355242130E100FCA962 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		94DBC356242130E100FCA962 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageFetcherSpec.swift; sourceTree = "<group>"; };
 		AEC3482A0C30F5A1EEF08F00 /* Pods-AsyncImageFetcherDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncImageFetcherDemo.release.xcconfig"; path = "Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B8D71DEB10ADC400E7100940 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 		CC54C48EE759822F9AB66631 /* Pods-AsyncImageFetcherDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncImageFetcherDemo.debug.xcconfig"; path = "Target Support Files/Pods-AsyncImageFetcherDemo/Pods-AsyncImageFetcherDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 		94397F81242120920079459A /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94DBC359242136E600FCA962 /* AsyncImageFetcherSpec.swift */,
 				94397F97242128380079459A /* Supporting Files */,
 			);
 			path = Specs;
@@ -143,6 +154,10 @@
 		94DBC34E24212FC600FCA962 /* AsyncImageFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				94DBC34F2421308400FCA962 /* Article.swift */,
+				94DBC355242130E100FCA962 /* ArticleTableViewCell.swift */,
+				94DBC356242130E100FCA962 /* ArticleTableViewCell.xib */,
+				94DBC351242130A600FCA962 /* AsyncImageFetcher.swift */,
 				94397F6C24211FEC0079459A /* ViewController.swift */,
 			);
 			path = AsyncImageFetcher;
@@ -224,6 +239,7 @@
 					};
 					94397F7F242120920079459A = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 94397F6424211FEC0079459A;
 					};
 				};
@@ -252,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DBC358242130E100FCA962 /* ArticleTableViewCell.xib in Resources */,
 				94397F94242124EA0079459A /* Main.storyboard in Resources */,
 				94397F8E242124E20079459A /* Assets.xcassets in Resources */,
 				94397F93242124EA0079459A /* LaunchScreen.storyboard in Resources */,
@@ -336,8 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DBC3502421308400FCA962 /* Article.swift in Sources */,
 				94397F6D24211FEC0079459A /* ViewController.swift in Sources */,
 				94397F6924211FEC0079459A /* AppDelegate.swift in Sources */,
+				94DBC352242130A600FCA962 /* AsyncImageFetcher.swift in Sources */,
+				94DBC357242130E100FCA962 /* ArticleTableViewCell.swift in Sources */,
 				94397F6B24211FEC0079459A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DBC35A242136E600FCA962 /* AsyncImageFetcherSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,9 +561,10 @@
 			baseConfigurationReference = B8D71DEB10ADC400E7100940 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Specs/Info.plist;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,6 +574,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncImageFetcherDemo.app/AsyncImageFetcherDemo";
@@ -563,9 +586,10 @@
 			baseConfigurationReference = 47F476EA8D1EC46E988A3BF0 /* Pods-Specs.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Specs/Info.plist;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
