@@ -10,6 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var dataSource: [Article] = []
     var articleFetcher = ArticleFetcher()
+    var asyncImageFetcher = AsyncImageFetcher()
     
     // MARK: - View lifecycle
     
@@ -23,11 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewWillAppear(animated)
         
         articleFetcher.fetch { [weak self] articles in
-            self?.activityIndicatorView.stopAnimating()
-                        
-            self?.dataSource = articles
-            
-            self?.tableView.reloadData()
+            self?.articleFetchHandler(articles: articles)
         }
     }
     
@@ -42,13 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ArticleTableViewCell
-        
-        cell.selectionStyle = .none
-        
-        let article = dataSource[indexPath.row]
-        
-        cell.articleTitle.text = article.title
+        let cell = dequeueReusableCell(indexPath: indexPath)
                 
         return cell
     }
@@ -67,5 +58,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.register(nib, forCellReuseIdentifier: "cell")
         
         tableView.tableFooterView = UIView(frame: .zero)
+    }
+    
+    private func dequeueReusableCell(indexPath: IndexPath) -> ArticleTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ArticleTableViewCell
+        
+        cell.selectionStyle = .none
+        
+        let article = dataSource[indexPath.row]
+        
+        cell.articleTitle.text = article.title
+        
+        let dataTaskUUID = asyncImageFetcher.fetch(imageURLString: article.imageURLString) { image in
+            guard let image = image else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                cell.articleImageView.image = image
+            }
+        }
+        
+        if let dataTaskUUID = dataTaskUUID {
+            cell.onReuse = { [weak self] in
+                self?.asyncImageFetcher.cancel(imageFetchUUID: dataTaskUUID)
+            }
+        }
+        
+        return cell
+    }
+    
+    private func articleFetchHandler(articles: [Article]) {
+        activityIndicatorView.stopAnimating()
+        dataSource = articles
+        tableView.reloadData()
     }
 }
