@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
+platform :ios, '13.2'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -16,7 +16,7 @@ end
 
 target :Specs do
   shared_pods
-  
+
   pod 'Quick', '2.2.0'
   pod 'Nimble', '8.0.5'
 end
